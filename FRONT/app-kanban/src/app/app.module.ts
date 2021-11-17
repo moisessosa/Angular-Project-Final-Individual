@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { TitleComponent } from './title/title.component';
 import { CardComponent } from './card/card.component';
+import { FillCardComponent } from './card/fill-card/fill-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     TitleComponent,
-    CardComponent
+    CardComponent,
+    FillCardComponent
   ],
   imports: [
     BrowserModule

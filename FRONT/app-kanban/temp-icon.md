@@ -3,7 +3,7 @@ check bien
 flecha izquierda
 <i class="far fa-arrow-alt-circle-left fs-2"></i>
 flecha derecha
-<i class="far fa-arrow-alt-circle-right" style="font-size: 30px;"></i>
+<i class="far fa-arrow-alt-circle-right" ></i>
 
 editar<i class="fas fa-edit"></i>
 Eliminar <i class="fas fa-trash-alt"></i>
