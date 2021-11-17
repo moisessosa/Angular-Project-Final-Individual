@@ -1,16 +1,16 @@
 <div [ngSwitch]="titulo">
 
 <div *ngSwitchCase="'To Do'" class="card text-white bg-primary mb-3">
-  <app-fill-card></app-fill-card>
+  <app-fill-card [titulo] = "titulo"></app-fill-card>
   </div>
 
 
 <div *ngSwitchCase="'Doing'"class="card text-white bg-secondary mb-3">
-  <app-fill-card></app-fill-card>   
+  <app-fill-card [titulo] = "titulo"></app-fill-card>   
 </div>
 
 <div *ngSwitchCase="'Done'" class="card text-white bg-success mb-3">
-  <app-fill-card></app-fill-card>
+  <app-fill-card [titulo] = "titulo"></app-fill-card>
 </div>
 
 </div><!--End Switch-->

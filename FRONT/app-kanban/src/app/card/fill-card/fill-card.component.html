@@ -5,8 +5,9 @@
       <h5 class="card-title">Description</h5>
       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     </div>
-    <div class="card-footer d-flex justify-content-between ">
-        <i class="far fa-arrow-alt-circle-left fs-2"></i>
+    <div class="card-footer d-flex justify-content-between" >
+        <i class="far fa-arrow-alt-circle-left fs-2" *ngIf="titulo!='To Do'; else whiteSpace"></i>
         <i class="fas fa-trash-alt fs-3"></i>
-        <i class="far fa-arrow-alt-circle-right fs-2" ></i>
+        <i class="far fa-arrow-alt-circle-right fs-2" *ngIf="titulo!='Done'; else whiteSpace"></i>
+        <ng-template #whiteSpace><span></span></ng-template>
     </div>
