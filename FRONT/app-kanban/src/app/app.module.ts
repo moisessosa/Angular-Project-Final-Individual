@@ -6,6 +6,7 @@ import { HeaderComponent } from './header/header.component';
 import { TitleComponent } from './title/title.component';
 import { CardComponent } from './card/card.component';
 import { FillCardComponent } from './card/fill-card/fill-card.component';
+import { NewWorkComponent } from './new-work/new-work.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { FillCardComponent } from './card/fill-card/fill-card.component';
     HeaderComponent,
     TitleComponent,
     CardComponent,
-    FillCardComponent
+    FillCardComponent,
+    NewWorkComponent
   ],
   imports: [
     BrowserModule
