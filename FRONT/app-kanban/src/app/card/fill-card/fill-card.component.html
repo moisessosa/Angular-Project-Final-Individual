@@ -1,9 +1,9 @@
 <div class="card-header d-flex justify-content-between ">
-    <span>ID</span> <span>Title</span><i class="fas fa-edit"></i>
+    <span id="id">ID</span> <input type="text" id="titulo" value="titulo" disabled><i class="fas fa-edit"></i>
 </div>
     <div class="card-body">
       <h5 class="card-title">Description</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <textarea disabled class="card-text" id="conteudo" rows="5">Some quick example text to build on the card title and make up the bulk of the card's content.</textarea>
     </div>
     <div class="card-footer d-flex justify-content-between" >
         <i class="far fa-arrow-alt-circle-left fs-2" *ngIf="titulo!='To Do'; else whiteSpace"></i>
