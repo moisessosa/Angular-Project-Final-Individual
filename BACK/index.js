@@ -21,6 +21,7 @@ app.post('/login', (req, res) => {
     const { DEFAULT_LOGIN, DEFAULT_PASSWORD, JWT_SECRET } = process.env;
     if (login === DEFAULT_LOGIN && senha === DEFAULT_PASSWORD) {
         const token = jwt.sign({ user: `${DEFAULT_LOGIN}` }, JWT_SECRET, { expiresIn: '1h' });
+        console.log(res.json(token))//
         return res.json(token);
     }
     res.status = 401;
