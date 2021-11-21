@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Work } from './work'; 
+import { Work } from './work.model'; 
 const URL_API = "http://localhost:5000/";//REST_API_SERVER
 
 @Injectable({

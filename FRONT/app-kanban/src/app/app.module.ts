@@ -7,6 +7,7 @@ import { TitleComponent } from './title/title.component';
 import { CardComponent } from './card/card.component';
 import { FillCardComponent } from './card/fill-card/fill-card.component';
 import { NewWorkComponent } from './new-work/new-work.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { NewWorkComponent } from './new-work/new-work.component';
     TitleComponent,
     CardComponent,
     FillCardComponent,
-    NewWorkComponent
+    NewWorkComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
