@@ -8,6 +8,8 @@ import { CardComponent } from './card/card.component';
 import { FillCardComponent } from './card/fill-card/fill-card.component';
 import { NewWorkComponent } from './new-work/new-work.component';
 import { LoginComponent } from './login/login.component';
+import { KanbanComponent } from './kanban/kanban.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -17,11 +19,13 @@ import { LoginComponent } from './login/login.component';
     CardComponent,
     FillCardComponent,
     NewWorkComponent,
-    LoginComponent
+    LoginComponent,
+    KanbanComponent
   ],
   imports: [
     BrowserModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
