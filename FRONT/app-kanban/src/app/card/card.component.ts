@@ -1,11 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ApiConectService } from '../shared/api-conect.service';
-import { Work } from '../shared/work.model';
+
+import { Work } from '../../shared/work.model';
 
 //
 
-
-const URL_API = "http://localhost:5000/";
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',

@@ -1,16 +1,17 @@
 <div class="w-25 text-center mx-auto border border-secondary border-2 border-info rounded mt-5 p-3">
-<form>
+<div>
     <div class="mb-3">
       <label for="user" class="form-label">User:</label>
-      <input type="text" class="form-control" id="user">
+      <input type="text" class="form-control" id="user" name="user"
+      (input)="escribir($event,'usuario')" #user>
       
     </div>
     <div class="mb-3">
       <label for="password" class="form-label">Password:</label>
-      <input type="password" class="form-control" id="password" (input)="escribir($event)">
+      <input type="password" class="form-control" id="password" (input)="escribir($event,'senha')" #password>
     </div>
     
-    <a routerLink="/kanban"class="btn btn-primary">Login</a>
-    <a (click)="checkPassword()">Prueba</a>
-  </form>
+   <!--  <a routerLink="/kanban"class="btn btn-primary">Login</a> -->
+    <button class="btn btn-primary" (click)="checkPassword()">Login</button>
+  </div>
 </div>
