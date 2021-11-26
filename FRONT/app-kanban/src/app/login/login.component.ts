@@ -9,7 +9,7 @@ import { APIService } from 'src/shared/api.service';
 export class LoginComponent implements OnInit {
  senha:string ="";
  login:string="";
- loginError:boolean = false;
+ //loginError:boolean = false;
   
  constructor(private api: APIService, private router: Router) { }
 
@@ -21,13 +21,13 @@ export class LoginComponent implements OnInit {
       .subscribe((token) => {
         if (token) {
           this.api.setAuth(token);
-          // console.log(this.api.authorization);
+          
           this.router.navigateByUrl('/kanban');//redirecciona
-          this.loginError = false;
+         // this.loginError = false;
         } else {
-          console.log('Não autorizado', this.login, this.senha);
-          this.loginError = true;
-          this.api.clearAuth()
+          alert(`Não autorizado ${this.login} não existe ou Senha Invalida`);
+         // this.loginError = true;
+          this.api.limparAuth()
         }
       });
  
@@ -41,6 +41,6 @@ export class LoginComponent implements OnInit {
     } else{
       this.login=evt.target.value;
     }
-    console.log(this.senha, this.login);
+    /* console.log(this.senha, this.login); */
   }
 }

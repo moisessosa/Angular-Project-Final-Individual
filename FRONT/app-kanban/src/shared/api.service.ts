@@ -13,7 +13,7 @@ export class APIService {
 
   cards: Work[] = [];
   authorization: string = localStorage.getItem('auth') || '';
-  loginn!: boolean;
+  loginn!: boolean;//posivelmente tem que eliminar
 
   getAuthorizationToken(login: string, senha: string): Observable<string> {
     const url = API_SERVER + '/login/';
@@ -30,7 +30,7 @@ export class APIService {
     this.loginn = true;
   }
 
-  clearAuth() {
+  limparAuth() {
     this.authorization = '';
     this.loginn = false;
   }
@@ -57,7 +57,7 @@ export class APIService {
       Authorization: this.authorization,
     };
     const options = { headers: headers };
-    console.log({ titulo, conteudo, lista });
+    //console.log({ titulo, conteudo, lista });
     const response = this.httpClient.post(
       url,
       { titulo, conteudo, lista },

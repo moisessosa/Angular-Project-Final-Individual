@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 import { Work } from '../../shared/work.model';
+import { APIService } from '../../shared/api.service';
 
 //
 
@@ -14,12 +15,12 @@ export class CardComponent implements OnInit {
 auth!:string;
 todasCards!:any;
 
-  constructor() {
+  constructor(private api: APIService) {
 
    }
 
-  ngOnInit(): void {
-    
+  ngOnInit(): void {//
+    const data = this.api.getAllCards()
+    console.log("RECUPERACION",data)
   }
-
 }

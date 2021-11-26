@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { APIService } from '../../shared/api.service';
+import { Work } from '../../shared/work.model';
+
 
 @Component({
   selector: 'app-new-work',
@@ -10,7 +13,10 @@ export class NewWorkComponent implements OnInit {
 work!: FormGroup; //para poder trabajar con Forms
 titulo!:string;
 conteudo!:string;
-  constructor() { }
+cards!:Work[];
+respuesta!: any;
+ 
+  constructor(private api: APIService) { }
 
   ngOnInit(): void {
     this.work = new FormGroup({
@@ -22,14 +28,19 @@ conteudo!:string;
   }
  addWork(){
   
-  console.log(this.work.value.id);
-  console.log(this.work.value.titulo);
-  console.log(this.work.value.conteudo);
-  console.log(this.work.value.lista);
-  /* <div *ngSwitchCase="'Doing'"class="card text-white bg-secondary mb-3">
-  <app-fill-card [titulo] = "titulo"></app-fill-card>   
-</div> */
-this.work.reset();
+
+  this.api.createNewCard(this.work.value.titulo,this.work.value.conteudo,this.work.value.lista).
+  subscribe((data) => {
+    this.respuesta = data;
+  });
+
+  this.work.reset();
+  window.location.reload();/* para que el formulario funcione */
+  /* this.api.getAllCards().subscribe((data) => {
+    this.cards=data;
+    console.log(this.cards)
+  });//Ya no hace falta aqui */
+    
 } 
 escribir = ($event: any, elemento: string)=>{
   
