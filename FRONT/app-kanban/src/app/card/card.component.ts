@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-import { Work } from '../../shared/work.model';
-import { APIService } from '../../shared/api.service';
+import { Work } from 'src/shared/work.model';
+import { APIService } from 'src/shared/api.service';
 
 //
 
@@ -11,16 +11,24 @@ import { APIService } from '../../shared/api.service';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
+
 @Input() titulo!:string;
-auth!:string;
-todasCards!:any;
+ 
+/* cards!:Work[]; */ 
 
   constructor(private api: APIService) {
-
+    /* this.api.getAllCards().subscribe((data) => {
+      this.cards = data;
+      console.log("card compmente",this.cards)
+    }); */
    }
 
   ngOnInit(): void {//
-    const data = this.api.getAllCards()
-    console.log("RECUPERACION",data)
+    /* this.api.getAllCards().subscribe((data) => {
+      this.cards=data;
+     console.log("dentro de cards",this.cards)
+    }); */
+    
   }
+
 }

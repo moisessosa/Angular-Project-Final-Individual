@@ -28,7 +28,8 @@ import { APIService } from 'src/shared/api.service';
     BrowserModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    HttpClientModule, FormsModule
+    HttpClientModule, 
+    FormsModule
   ],
   providers: [APIService],
   bootstrap: [AppComponent]
