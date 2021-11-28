@@ -8,12 +8,12 @@
 
 
   <div *ngSwitchCase="'Doing'"class="card text-white bg-secondary mb-3">
-    <app-fill-card [titulo] = "titulo"></app-fill-card>   
+    <app-fill-card [lista] = "lista" [id]="id" [conteudo]="conteudo" [titulo]="titulo"></app-fill-card>   
     <ng-content></ng-content>
   </div>
 
   <div *ngSwitchCase="'Done'" class="card text-white bg-success mb-3">
-    <app-fill-card [titulo] = "titulo"></app-fill-card>
+    <app-fill-card [lista] = "lista" [id]="id" [conteudo]="conteudo" [titulo]="titulo"></app-fill-card>
     <ng-content></ng-content>
   </div>
 
