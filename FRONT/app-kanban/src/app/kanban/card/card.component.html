@@ -1,8 +1,8 @@
-<div *ngFor="let work of cards">
-  <div [ngSwitch]="work.lista" id="titulo"><!---->
+<!-- <div *ngFor="let work of cards"> -->
+  <div [ngSwitch]="lista" id="titulo"><!---->
 
   <div *ngSwitchCase="'To Do'" class="card text-white bg-primary mb-3">
-    <app-fill-card [titulo] = "work.lista" [id]="work.id" [description]="work.conteudo" [tarefa]="work.titulo"></app-fill-card>
+    <app-fill-card [lista] = "lista" [id]="id" [conteudo]="conteudo" [titulo]="titulo"></app-fill-card>
     <ng-content></ng-content>
     </div>
 
@@ -18,5 +18,5 @@
   </div>
 
   </div><!--End Switch-->
-
-</div>
+<!-- 
+</div> -->

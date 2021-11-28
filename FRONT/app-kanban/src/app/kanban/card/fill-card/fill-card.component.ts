@@ -7,9 +7,9 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class FillCardComponent implements OnInit {
   @Input() titulo!:string;
-  @Input() tarefa!:string;
+  @Input() lista!:string;
   @Input() id!:string;
-  @Input() description!:string;
+  @Input() conteudo!:string;
   constructor() { }
 
   ngOnInit(): void {

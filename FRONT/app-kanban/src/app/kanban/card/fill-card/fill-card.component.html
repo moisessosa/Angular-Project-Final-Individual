@@ -1,11 +1,11 @@
 <div>
 <span id="id">ID: {{id}} </span>
 <div class="card-header d-flex justify-content-between ">
-     <input type="text" id="titulo" value={{tarefa}} disabled><i class="fas fa-edit"></i>
+     <input type="text" id="titulo" value={{titulo}} disabled><i class="fas fa-edit"></i>
 </div>
     <div class="card-body">
       <h5 class="card-title">description</h5>
-      <textarea disabled class="card-text" id="conteudo" rows="5">{{description}}</textarea>
+      <textarea disabled class="card-text" id="conteudo" rows="5">{{conteudo}}</textarea>
     </div>
     <div class="card-footer d-flex justify-content-between" >
         <i class="far fa-arrow-alt-circle-left fs-2" *ngIf="titulo!='To Do'; else whiteSpace"></i>
