@@ -24,7 +24,7 @@ export class KanbanComponent implements OnInit {
    //Após o Angular inicializar suas páginas e páginas filhas. 
    //ngAfterContentInit: Após o Angular pegar um conteúdo externo
    // e inserir no componente: ng-content 
-    setTimeout(()=>this.paraSaberSiRecuperoWorks(),1000)
+  //  setTimeout(()=>this.paraSaberSiRecuperoWorks(),1000)
   }
   
 
