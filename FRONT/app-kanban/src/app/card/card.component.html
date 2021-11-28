@@ -1,19 +1,22 @@
-<div [ngSwitch]="titulo" id="titulo"><!--*ngFor="let work of cards"-->
+<div *ngFor="let work of cards">
+  <div [ngSwitch]="work.lista" id="titulo"><!---->
 
-<div *ngSwitchCase="'To Do'" class="card text-white bg-primary mb-3">
-  <app-fill-card [titulo] = "titulo"></app-fill-card>
-  <ng-content></ng-content>
+  <div *ngSwitchCase="'To Do'" class="card text-white bg-primary mb-3">
+    <app-fill-card [titulo] = "work.lista" [id]="work.id" [description]="work.conteudo" [tarefa]="work.titulo"></app-fill-card>
+    <ng-content></ng-content>
+    </div>
+
+
+  <div *ngSwitchCase="'Doing'"class="card text-white bg-secondary mb-3">
+    <app-fill-card [titulo] = "titulo"></app-fill-card>   
+    <ng-content></ng-content>
   </div>
 
+  <div *ngSwitchCase="'Done'" class="card text-white bg-success mb-3">
+    <app-fill-card [titulo] = "titulo"></app-fill-card>
+    <ng-content></ng-content>
+  </div>
 
-<div *ngSwitchCase="'Doing'"class="card text-white bg-secondary mb-3">
-  <app-fill-card [titulo] = "titulo"></app-fill-card>   
-  <ng-content></ng-content>
+  </div><!--End Switch-->
+
 </div>
-
-<div *ngSwitchCase="'Done'" class="card text-white bg-success mb-3">
-  <app-fill-card [titulo] = "titulo"></app-fill-card>
-  <ng-content></ng-content>
-</div>
-
-</div><!--End Switch-->

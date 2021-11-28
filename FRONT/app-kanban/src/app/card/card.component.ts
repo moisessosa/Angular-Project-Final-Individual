@@ -14,20 +14,16 @@ export class CardComponent implements OnInit {
 
 @Input() titulo!:string;
  
-/* cards!:Work[]; */ 
-
+cards!:Work[]; 
   constructor(private api: APIService) {
-    /* this.api.getAllCards().subscribe((data) => {
+    this.api.getAllCards().subscribe((data) => {
       this.cards = data;
-      console.log("card compmente",this.cards)
-    }); */
+      console.log("card componente",this.cards)
+    });
    }
 
   ngOnInit(): void {//
-    /* this.api.getAllCards().subscribe((data) => {
-      this.cards=data;
-     console.log("dentro de cards",this.cards)
-    }); */
+   
     
   }
 

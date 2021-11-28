@@ -10,7 +10,7 @@ export class KanbanComponent implements OnInit {
   cards!:Work[];
   paraSaberSiRecuperoWorks(): void {// usar esto para procesar los datos y crear las tarjetas
     
-    console.log("en la funcion",this.cards);
+    console.log("en kanban",this.cards);
    }
    constructor(private api: APIService) { }
 
