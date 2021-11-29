@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { APIService } from 'src/shared/api.service';
 import { CardComponent } from './kanban/card/card.component';
 import { FillCardComponent } from './kanban/card/fill-card/fill-card.component';
+import { ErroComponent } from './erro/erro.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import { FillCardComponent } from './kanban/card/fill-card/fill-card.component';
     FillCardComponent,
     NewWorkComponent,
     LoginComponent,
-    KanbanComponent
+    KanbanComponent,
+    ErroComponent
   ],
   imports: [
     BrowserModule,
