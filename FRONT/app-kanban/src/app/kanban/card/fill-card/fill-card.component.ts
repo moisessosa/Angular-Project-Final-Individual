@@ -11,6 +11,13 @@ export class FillCardComponent implements OnInit {
   @Input() lista!:string;
   @Input() id!:string;
   @Input() conteudo!:string;
+  edit:boolean=true;
+  editMode(mode:string){
+    this.edit= !this.edit;
+    if(mode==='n') window.location.reload();
+   
+    
+  }
   buttonRight(id:string,titulo:string, conteudo:string,lista:string){
     console.log (id,titulo, conteudo,lista)
     if(lista =="To Do"){
