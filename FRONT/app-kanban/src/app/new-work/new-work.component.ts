@@ -27,11 +27,12 @@ respuesta!: any;
     });
   }
  addWork(){
-  
+  console.log(this.work.value.titulo,this.work.value.conteudo,this.work.value.lista)
 
   this.api.createNewCard(this.work.value.titulo,this.work.value.conteudo,this.work.value.lista).
   subscribe((data) => {
     this.respuesta = data;
+    console.log('em work',data)
   });
 
   this.work.reset();

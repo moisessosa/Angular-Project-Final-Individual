@@ -8,9 +8,9 @@
       <textarea disabled class="card-text" id="conteudo" rows="5">{{conteudo}}</textarea>
     </div>
     <div class="card-footer d-flex justify-content-between" >
-        <i class="far fa-arrow-alt-circle-left fs-2" *ngIf="lista!='To Do'; else whiteSpace"></i>
-        <i class="fas fa-trash-alt fs-3"></i>
-        <i class="far fa-arrow-alt-circle-right fs-2" *ngIf="lista!='Done'; else whiteSpace" (click)="doingDone(id,titulo, conteudo, lista)">a</i>
+        <i class="far fa-arrow-alt-circle-left fs-2 cursor" *ngIf="lista!='To Do'; else whiteSpace" (click)="buttonLeft(id,titulo, conteudo, lista)"></i>
+        <i class="fas fa-trash-alt fs-3 cursor" (click)=delete(id)></i>
+        <i class="far fa-arrow-alt-circle-right fs-2 cursor" *ngIf="lista!='Done'; else whiteSpace" (click)="buttonRight(id,titulo, conteudo, lista)"></i>
         <ng-template #whiteSpace><span></span></ng-template>
     </div>
   </div>

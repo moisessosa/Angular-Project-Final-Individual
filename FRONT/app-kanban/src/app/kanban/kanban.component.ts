@@ -17,7 +17,7 @@ export class KanbanComponent implements OnInit {
   ngOnInit(): void {
     this.api.getAllCards().subscribe((data) => {
       this.cards=data;
-      //console.log(this.cards)
+    
     });
   }
   ngAfterViewInit():void{
