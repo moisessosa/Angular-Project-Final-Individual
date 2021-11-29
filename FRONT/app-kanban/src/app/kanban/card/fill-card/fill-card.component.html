@@ -11,6 +11,7 @@
     <div class="card-body">
       <h5 class="card-title">description</h5>
       <textarea [disabled]="edit" class="card-text" id="conteudo" [(ngModel)]="conteudo"rows="5">{{conteudo}}</textarea>
+      <h6 class="text-end">Lista: {{lista}}</h6>
     </div>
     <div class="card-footer d-flex justify-content-between" >
         <i class="far fa-arrow-alt-circle-left fs-2 cursor" *ngIf="lista!='To Do'; else whiteSpace" (click)="buttonLeft(id,titulo, conteudo, lista)"></i>
