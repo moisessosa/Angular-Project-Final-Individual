@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
          // this.loginError = true;
           this.api.limparAuth()
         }
-      });
+      }, error=> alert(`ooops erro ${error.status} ${error.statusText}`));
  
      console.log(this.senha, this.login);
   
