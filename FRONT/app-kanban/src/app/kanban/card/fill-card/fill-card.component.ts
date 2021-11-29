@@ -27,7 +27,7 @@ export class FillCardComponent implements OnInit {
     }else if(lista =="Doing"){
       this.api.changeCardById(id,titulo, conteudo,"Done").subscribe((data) => {
         
-      });;
+      });
     }
     window.location.reload();
   }
@@ -48,6 +48,13 @@ export class FillCardComponent implements OnInit {
     
     this.api.deleteCardById(id).subscribe((data) => {
      
+    });
+    window.location.reload();
+  }
+  save(id:string,titulo:string, conteudo:string,lista:string){
+    console.log(id,titulo, conteudo,lista);
+    this.api.changeCardById(id,titulo, conteudo,lista).subscribe((data) => {
+        
     });
     window.location.reload();
   }
