@@ -15,10 +15,9 @@ export class KanbanComponent implements OnInit {
    constructor(private api: APIService) { }
 
   ngOnInit(): void {
-    this.api.getAllCards().subscribe((data) => {
-      this.cards=data;
-    
-    });
+    this.api.getAllCards().subscribe((data) =>this.cards=data    
+    , error => {alert(`oops, ${error.status}, ${error.statusText}`);
+    window.location.href = "http://127.0.0.1:4200/login";});
   }
   ngAfterViewInit():void{
    //Após o Angular inicializar suas páginas e páginas filhas. 

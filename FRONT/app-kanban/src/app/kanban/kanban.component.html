@@ -1,33 +1,33 @@
-<div class="container" >
-    <div class="row">
-      <div class="col-md-6 col-lg-3">
+
+<div class="grid">
+      <div class="new_work">
         <app-title [titulo]="'New Work'"></app-title>
         <app-new-work></app-new-work>
        
       </div>
-      <app-title class="col-md-6 col-lg-3" [titulo]="'To Do'"></app-title>
-      <app-title class="col-md-6 col-lg-3" [titulo]="'Doing'"></app-title>
-      <app-title class="col-md-6 col-lg-3" [titulo]="'Done'"></app-title>
+      <app-title class="to_do" [titulo]="'To Do'"></app-title>
+      <app-title class="doing" [titulo]="'Doing'"></app-title>
+      <app-title class="done" [titulo]="'Done'"></app-title>
       
-      <div class="container">
-      <div class="row" *ngFor="let work of cards"
-      style="position: relative;top:-387px; left: 330px;"><!--para el for-->
+<div class="corpo">
+  <div class="grid-tarefas" *ngFor="let work of cards"><!--para el for-->
 
-        <div class="col-md-6 col-lg-3">
+        
           
-          <app-card *ngIf="work.lista=='To Do'" [lista]="work.lista" [id]="work.id" [conteudo]="work.conteudo" [titulo]="work.titulo"></app-card>
+          <app-card  *ngIf="work.lista=='To Do'" [lista]="work.lista" [id]="work.id" [conteudo]="work.conteudo" [titulo]="work.titulo"></app-card>
           
-        </div>
-        <div class="col-md-6 col-lg-3">
+        
+
+        
           
-          <app-card *ngIf="work.lista=='Doing'" [lista]="work.lista" [id]="work.id" [conteudo]="work.conteudo" [titulo]="work.titulo"></app-card>
+          <app-card  *ngIf="work.lista=='Doing'" [lista]="work.lista" [id]="work.id" [conteudo]="work.conteudo" [titulo]="work.titulo"></app-card>
           
-        </div>
-        <div class="col-md-6 col-lg-3">
-          
-          <app-card *ngIf="work.lista=='Done'" [lista]="work.lista" [id]="work.id" [conteudo]="work.conteudo" [titulo]="work.titulo"></app-card>
-        </div>
-      </div>
-      </div><!--Fin del for-->
-    </div>
-  </div>
+        
+
+       
+          <app-card   *ngIf="work.lista=='Done'" [lista]="work.lista" [id]="work.id" [conteudo]="work.conteudo" [titulo]="work.titulo"></app-card>
+        
+  </div><!--Fin del for-->
+</div>
+</div>   
+    

@@ -1,0 +1,35 @@
+.grid {
+  display: grid;
+  grid-template:
+    "new_work to_do doing done"
+    "new_work corpo corpo corpo";
+  grid-gap: 10px;
+}
+.new_work {
+  grid-area: new_work;
+}
+.to_do {
+  grid-area: to_do;
+}
+.doing {
+  grid-area: doing;
+}
+.done {
+  grid-area: done;
+}
+.corpo {
+  grid-area: corpo;
+}
+/* .grid-tarefas {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; */
+/* grid-template: "fazer fazendo pronto"; */
+/* }
+.fazer {
+  grid-area: fazer;
+}
+.fazendo {
+  grid-area: fazendo;
+}
+.pronto {
+  grid-area: pronto;} */

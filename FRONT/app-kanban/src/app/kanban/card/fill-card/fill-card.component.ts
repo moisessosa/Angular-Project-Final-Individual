@@ -23,11 +23,12 @@ export class FillCardComponent implements OnInit {
     if(lista =="To Do"){
       this.api.changeCardById(id,titulo, conteudo,"Doing").subscribe((data) => {
         
-      });
+      }, error => alert(`oops, ${error.status}, ${error.statusText}`));
     }else if(lista =="Doing"){
       this.api.changeCardById(id,titulo, conteudo,"Done").subscribe((data) => {
         
-      });
+      }, error => {alert(`oops, ${error.status}, ${error.statusText}`);
+      window.location.href = "http://127.0.0.1:4200/login";});
     }
     window.location.reload();
   }
@@ -36,11 +37,13 @@ export class FillCardComponent implements OnInit {
     if(lista =="Done"){
       this.api.changeCardById(id,titulo, conteudo,"Doing").subscribe((data) => {
         
-      });
+      }, error => {alert(`oops, ${error.status}, ${error.statusText}`);
+      window.location.href = "http://127.0.0.1:4200/login";});
     }else if(lista =="Doing"){
       this.api.changeCardById(id,titulo, conteudo,"To Do").subscribe((data) => {
         
-      });
+      }, error => {alert(`oops, ${error.status}, ${error.statusText}`);
+      window.location.href = "http://127.0.0.1:4200/login";});
     }
     window.location.reload();
   }
@@ -48,14 +51,16 @@ export class FillCardComponent implements OnInit {
     
     this.api.deleteCardById(id).subscribe((data) => {
      
-    });
+    },error => {alert(`oops, ${error.status}, ${error.statusText}`)
+    window.location.href = "http://127.0.0.1:4200/login";});
     window.location.reload();
   }
   save(id:string,titulo:string, conteudo:string,lista:string){
     console.log(id,titulo, conteudo,lista);
     this.api.changeCardById(id,titulo, conteudo,lista).subscribe((data) => {
         
-    });
+    }, error => {alert(`oops, ${error.status}, ${error.statusText}`)
+    window.location.href = "http://127.0.0.1:4200/login";});
     window.location.reload();
   }
   constructor(private api: APIService) { }
