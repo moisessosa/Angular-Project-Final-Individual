@@ -11,9 +11,9 @@
       
 <div class="corpo ">
   <div class="grid-tarefas" *ngFor="let work of cards"><!--para el for-->
-    <app-card class="col fazer"  *ngIf="work.lista=='To Do'" [lista]="work.lista" [id]="work.id" [conteudo]="work.conteudo" [titulo]="work.titulo"></app-card>
-    <app-card class="col fazendo" *ngIf="work.lista=='Doing'" [lista]="work.lista" [id]="work.id" [conteudo]="work.conteudo" [titulo]="work.titulo"></app-card>
-    <app-card class="col pronto"  *ngIf="work.lista=='Done'" [lista]="work.lista" [id]="work.id" [conteudo]="work.conteudo" [titulo]="work.titulo"></app-card>   
+    <app-card [ngClass]="'fazer'" *ngIf="work.lista=='To Do'" [lista]="work.lista" [id]="work.id" [conteudo]="work.conteudo" [titulo]="work.titulo"></app-card>
+    <app-card class="fazendo" *ngIf="work.lista=='Doing'" [lista]="work.lista" [id]="work.id" [conteudo]="work.conteudo" [titulo]="work.titulo"></app-card>
+    <app-card class="pronto"  *ngIf="work.lista=='Done'" [lista]="work.lista" [id]="work.id" [conteudo]="work.conteudo" [titulo]="work.titulo"></app-card>   
         
 
 
