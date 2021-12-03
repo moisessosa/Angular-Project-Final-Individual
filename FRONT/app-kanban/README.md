@@ -23,3 +23,4 @@ Vários erros são tratados, além de senha errada ou erro do usuário, também 
 Outros erros tratados apenas quando o usuário grava um quebrado que não existe, que mostra uma mensagem e depois ou o usuário pode voltar atrás, o fazer click no botão de voltar ao inicio.
 
 Também mostra um erro quando o token não é mais válido e redireciona para login.
+rama de revisão
